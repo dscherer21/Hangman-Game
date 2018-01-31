@@ -1,6 +1,40 @@
 body {
-	background: url(https://images4.alphacoders.com/888/8886.jpg);
+	background: url(http://www.textures4photoshop.com/tex/thumbs/matrix-code-animation-gif-free-animated-background-716.gif);
 	background-size: cover;
 	background-repeat: no-repeat;
     background-color: teal;
 }
+
+.jumbotron {
+	background-color: rgba(0,0,0,0);
+	opacity: .8;
+	color: white;
+}
+
+	h1 {
+		font-size: 96px;
+		font-family: 'Spectral SC', serif;
+	}
+
+	h2 {
+		font-size: 52px;
+		font-family: 'VT323';
+	}
+
+	hr {
+		opacity: 0;
+	}
+
+	.matrix-style {
+		background-color: black;
+		color: green;
+		font-family: VT323, sans-serif;
+	}
+
+	.panel-heading {
+		background-color: rgba(99,99,99,1);
+	}
+
+	.panel-body {
+		font-size: 25px;
+	}

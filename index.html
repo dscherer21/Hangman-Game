@@ -12,21 +12,76 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Spectral+SC|VT323" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <link rel="script" type="text/javascript" href="assets/javascript/game.js">
 
     </head>
 
     <body>
+
+      <!--Page Audio-->
+      <audio id="myAudio" type="audio/mp3" src="assets/images/Clubbed_to_Death_The_Matrix_Version.mp3" loop="loop" autoplay>Your browser does not support the audio element.</audio>
+
+      <hr>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="jumbotron container">
+        <header class="jumbotron container">
             <div class="row">
-                <div class="col-xs-12">
-                    <h1>The Matrix <span>Hangman</span></h1>
+                <div class="col-xs-12 text-center">
+                    <h1><b>[The Matrix]</b></h1>
+                    <h2>Hangman</h2>
                 </div>
             </div>
-        </div>
-        
+        </header>
+
+        <main class="container">
+
+          <div class="row text-center">
+
+            <div class="col-sm-5 col-sm-offset-1">
+              <!--Instruction Panel-->
+              <div class="panel panel-default matrix-style">
+                <!--Instruction Panel Heading-->
+                <div class="panel-heading">
+                  <h3>Instructions</h3>
+                </div>
+                <!--Instruction Panel Content-->
+                <div class="panel-body">
+                  <p>Press any key to start!</p>
+                  <hr>
+                  <ul>
+                    <li>
+                      <p>Type a letter and if it is part of the word or phrase, it will show inside the blanks for each instance of that letter.</p>
+                    </li>
+                    <li>
+                      <p>If you make a wrong guess, it will be logged in the guessed letters box.</p>
+                    </li>
+                    <li>
+                      <p>You have 8 wrong guesses before you get a game loss.</p>
+                    </li>
+                    <li>
+                      <p>After you win or lose, the computer will reset to a new word.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-5">
+              <!--Game Panel-->
+              <div class="panel panel-default matrix-style">
+                <!--Game Panel Heading-->
+                <div class="panel-heading">
+                  <h3>Game</h3>
+                </div>
+                <!--Game Panel Content-->
+                <div class="panel-body">
+                  Panel Content
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+        <link href="assets/javascript/game.js">
     </body>
 </html>

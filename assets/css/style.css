@@ -11,37 +11,37 @@ body {
 	color: white;
 }
 
-	h1 {
-		font-size: 96px;
-		font-family: 'Spectral SC', serif;
-	}
+h1 {
+	font-size: 96px;
+	font-family: 'Spectral SC', serif;
+}
 
-	h2 {
-		font-size: 52px;
-		font-family: 'VT323';
-	}
+h2 {
+	font-size: 52px;
+	font-family: 'VT323';
+}
 
-	hr {
-		opacity: 0;
-	}
+hr {
+	opacity: 0;
+}
 
 
 
-	.matrix-style {
-		background-color: black;
-		color: green;
-		font-family: VT323, sans-serif;
-	}
+.matrix-style {
+	background-color: black;
+	color: green;
+	font-family: VT323, sans-serif;
+}
 
-	.panel-heading {
-		background-color: rgba(99,99,99,1);
-	}
+.panel-heading {
+	background-color: rgba(99,99,99,1);
+}
 
-	.panel-body {
-		font-size: 25px;
-	}
+.panel-body {
+	font-size: 25px;
+}
 
-	.letter {
+.letter {
 	 display: inline-block;
 	 list-style: none;
 	 width: 20px;

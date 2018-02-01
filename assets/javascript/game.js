@@ -1,16 +1,20 @@
+//Bugs that need to be worked out:
+//When a "Space Bar" space is entered the whole phrase reveals.
+//Try to create a function that reveals empty spaces on phrase load.
+//Some of the phrases will are not auto indenting at the end of the line and breaking up the words.
 window.onload = function() {
     document.getElementById("myAudio").play();
 }
 
 (function () {
     "use strict";
-    var availableLetters, words, guessInput, guess, guessButton, lettersGuessed, lettersMatched, output, man, letters, lives, currentWord, numLettersMatched, messages;
+    var availableLetters, words, guessInput, guess, guessButton, lettersGuessed, lettersMatched, output, man, letters, lives, currentPhrase, numLettersMatched, messages;
 
     function setup() {
         /* start config options */
         availableLetters = "abcdefghijklmnopqrstuvwxyz ";
         lives = 8;
-        words = ["morpheus", "trinity", "seifer", "tank", "dozer", "mouse", "mr anderson", "agent smith", "the oracle", "there is no spoon", "free your mind neo", "digital pimp hard at work", "neo is the one"];
+        words = ["morpheus", "trinity", "cypher", "tank", "dozer", "mouse", "mr anderson", "agent smith", "the oracle", "there is no spoon", "free your mind neo", "digital pimp hard at work", "neo is the one"];
         messages = {
             win: 'You win! You must be The One!',
             lose: 'Game over! The Agents got to you!',
@@ -23,7 +27,7 @@ window.onload = function() {
         numLettersMatched = 0;
 
         /* choose a word */
-        currentWord = words[Math.floor(Math.random() * words.length)];
+        currentPhrase = words[Math.floor(Math.random() * words.length)];
 
         /* make #man and #output blank, create vars for later access */
         output = document.getElementById("output");
@@ -42,11 +46,11 @@ window.onload = function() {
 
         /* set up display of letters in current word */
         letters = document.getElementById("letters");
-        letters.innerHTML = '<li class="current-word">Current word:</li>';
+        letters.innerHTML = '<li class="current-phrase text-center">Current Phrase:</li>';
 
         var letter, i;
-        for (i = 0; i < currentWord.length; i++) {
-            letter = '<li class="letter letter' + currentWord.charAt(i).toUpperCase() + '">' + currentWord.charAt(i).toUpperCase() + '</li>';
+        for (i = 0; i < currentPhrase.length; i++) {
+            letter = '<li class="letter letter' + currentPhrase.charAt(i).toUpperCase() + '">' + currentPhrase.charAt(i).toUpperCase() + '</li>';
             letters.insertAdjacentHTML('beforeend', letter);
         }
     }
@@ -92,7 +96,7 @@ window.onload = function() {
                     output.classList.add("warning");
                 }
                 /* does guess exist in current word? if so, add to letters already matched, if final letter added, game over with win message */
-                else if (currentWord.indexOf(guess) > -1) {
+                else if (currentPhrase.indexOf(guess) > -1) {
                     var lettersToShow;
                     lettersToShow = document.querySelectorAll(".letter" + guess.toUpperCase());
 
@@ -101,14 +105,14 @@ window.onload = function() {
                     }
 
                     /* check to see if letter appears multiple times */
-                    for (var j = 0; j < currentWord.length; j++) {
-                        if (currentWord.charAt(j) === guess) {
+                    for (var j = 0; j < currentPhrase.length; j++) {
+                        if (currentPhrase.charAt(j) === guess) {
                             numLettersMatched += 1;
                         }
                     }
 
                     lettersMatched += guess;
-                    if (numLettersMatched === currentWord.length) {
+                    if (numLettersMatched === currentPhrase.length) {
                         gameOver(true);
                     }
                 }

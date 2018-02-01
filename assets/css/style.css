@@ -25,6 +25,8 @@ body {
 		opacity: 0;
 	}
 
+
+
 	.matrix-style {
 		background-color: black;
 		color: green;
@@ -38,3 +40,45 @@ body {
 	.panel-body {
 		font-size: 25px;
 	}
+
+	.letter {
+	 display: inline-block;
+	 list-style: none;
+	 width: 20px;
+	 margin: 0 5px;
+	 border-bottom: 1px solid green;
+	 text-align: center;
+	 color: black;
+}
+.current-word {
+	 list-style: none;
+	 font-size:
+}
+.output {
+	 opacity: 0;
+	 transition: opacity 1s ease;
+}
+.correct {
+	 background-color: green;
+	 transition: all 1s ease;
+}
+.error {
+	 color: red;
+	 opacity: 1;
+}
+.warning {
+	 color: orange;
+	 opacity: 1;
+}
+.win {
+	 color: green;
+	 opacity: 1;
+}
+
+.btn {
+	font-size: 21px;
+}
+
+#letters {
+	font-size: 35px;
+}

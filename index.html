@@ -38,28 +38,31 @@
           <div class="row text-center">
 
             <div class="col-sm-5 col-sm-offset-1">
-              <!--Instruction Panel-->
+              <!--Instructions Panel-->
               <div class="panel panel-default matrix-style">
-                <!--Instruction Panel Heading-->
+                <!--Instructions Panel Heading-->
                 <div class="panel-heading">
                   <h3>Instructions</h3>
                 </div>
-                <!--Instruction Panel Content-->
+                <!--Instructions Panel Content-->
                 <div class="panel-body">
                   <p>Press any key to start!</p>
                   <hr>
                   <ul>
                     <li>
-                      <p>Type a letter and if it is part of the word or phrase, it will show inside the blanks for each instance of that letter.</p>
+                      <p>Type a letter into the text box and click the "Guess" button.</P>
                     </li>
                     <li>
-                      <p>If you make a wrong guess, it will be logged in the guessed letters box.</p>
+                       <p>If the letter you guessed is in the phrase, it will show inside the blanks for each instance of that letter.</p>
                     </li>
                     <li>
-                      <p>You have 8 wrong guesses before you get a game loss.</p>
+                      <p>If you make a wrong guess, your life total will decrease by one.</p>
                     </li>
                     <li>
-                      <p>After you win or lose, the computer will reset to a new word.</p>
+                      <p>You have 8 wrong guesses before you get "Game Over".</p>
+                    </li>
+                    <li>
+                      <p>You may click the "Reset" button at any time to restart with a new word.</p>
                     </li>
                   </ul>
                 </div>
@@ -75,7 +78,27 @@
                 </div>
                 <!--Game Panel Content-->
                 <div class="panel-body">
-                  Panel Content
+                  <hr>
+                  <div class="row">
+                    <form id="hangman">
+                      <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" class="text-center">
+                      <input id="guess" name="guess" type="submit" value="Guess" class="btn" />
+                      <button id="restart" name="restart" type="button" class="btn">Restart</button>
+                    </form>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <ul id="letters"></ul>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <p id="man"></p>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <p id="output" class="output"></p>
+                  </div>
+                  <hr>
                 </div>
               </div>
             </div>

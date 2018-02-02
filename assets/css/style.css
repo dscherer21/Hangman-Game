@@ -59,7 +59,7 @@ hr {
 	 transition: opacity 1s ease;
 }
 .correct {
-	 background-color: green;
+	 color: green;
 	 transition: all 1s ease;
 }
 .error {
@@ -80,5 +80,5 @@ hr {
 }
 
 #letters {
-	font-size: 35px;
+	font-size: 45px;
 }
